@@ -4,12 +4,12 @@ import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
 
 // ── Firebase ───────────────────────────────────────────────────────────────────
 const firebaseConfig = {
-  apiKey: "AIzaSyAE6hLVgKeHBaUk0bA7TicZIvjVCcB47MQ",
-  authDomain: "plaasbestuurder-4026b.firebaseapp.com",
-  projectId: "plaasbestuurder-4026b",
-  storageBucket: "plaasbestuurder-4026b.firebasestorage.app",
-  messagingSenderId: "787786657782",
-  appId: "1:787786657782:web:197c0c2f0bac1f17aaa1d7"
+  apiKey: import.meta.env.VITE_API_KEY,
+  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGING_ID,
+  appId: import.meta.env.VITE_APP_ID
 };
 const firebaseApp = initializeApp(firebaseConfig);
 const db = getFirestore(firebaseApp);
